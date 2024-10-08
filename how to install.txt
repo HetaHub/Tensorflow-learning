@@ -1,0 +1,29 @@
+download python
+pip install virtualenv
+virtualenv --system-site-packages -p python ./tf2
+cd tf2/Scripts
+activate
+
+install cuda 10.0 https://developer.nvidia.com/cuda-downloads
+install cudnn   https://developer.nvidia.com/rdp/cudnn-download
+
+pip install tensorflow-gpu==2.0.0
+
+pip install numpy
+pip install matplotlib
+pip install pandas
+pip install opencv-python
+pip install tensorflow-addons
+pip install tensorflow-datasets
+pip install tensorflow-hub
+
+python -m pip install jupyter
+.\tf2\Scripts\activate
+pip install ipykernel
+python -m ipykernel install --name=tf2
+
+jupyter notebook
+
+pip install pydot
+apt-get install graphviz
+(or get in https://graphviz.gitlab.io/_pages/Download/Download_windows.html  and get 2.38 version and set env variable)
